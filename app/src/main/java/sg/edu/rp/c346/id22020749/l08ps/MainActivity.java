@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
                         intent.putExtra("clickedSong", clickedSong);
                         startActivity(intent);
+
                     }
                 });
 
