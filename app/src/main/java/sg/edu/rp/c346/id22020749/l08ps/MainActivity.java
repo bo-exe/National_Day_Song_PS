@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Song clickedSong = songList.get(position);
                         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
-                        intent.putExtra("clickedSong", (CharSequence) clickedSong);
+                        intent.putExtra("clickedSong", clickedSong);
                         startActivity(intent);
                     }
                 });
