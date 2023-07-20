@@ -2,60 +2,104 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnShowStar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/show_all_songs_with_5_stars" />
 
     <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/songId"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title" />
+        android:text="Song ID" />
 
     <EditText
-        android:id="@+id/etTitle"
+        android:id="@+id/songIdInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
 
     <TextView
-        android:id="@+id/textSinger"
-        android:layout_width="wrap_content"
+        android:id="@+id/editSongTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/singer" />
+        android:text="@string/song_title" />
 
     <EditText
-        android:id="@+id/etSinger"
+        android:id="@+id/editSongTitleInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
 
     <TextView
-        android:id="@+id/textYear"
-        android:layout_width="wrap_content"
+        android:id="@+id/editSongSingers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/singers" />
+
+    <EditText
+        android:id="@+id/editSongSingersInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/editSongYear"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/year" />
 
     <EditText
-        android:id="@+id/etYear"
+        android:id="@+id/editSongYearInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:ems="10"
         android:inputType="number" />
 
     <TextView
-        android:id="@+id/textStars"
-        android:layout_width="wrap_content"
+        android:id="@+id/editSongStars"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/stars" />
 
-    <EditText
-        android:id="@+id/etStars"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:id="@+id/editStarRg"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number" />
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_2" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_3" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_4" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_5" />
+
+    </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,7 +109,7 @@
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/update" />
 
@@ -75,11 +119,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/delete" />
+
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listView"
+    <Button
+        android:id="@+id/btnCancel"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/cancel" />
 
 </LinearLayout>
